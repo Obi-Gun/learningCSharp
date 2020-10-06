@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "learningCSharp", "learningC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "learningCSharp.UnitTests", "..\learningCSharp.UnitTests\learningCSharp.UnitTests.csproj", "{642F627E-73E3-4E5B-9B1B-78E93AF5F5B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.CW_04.10.2020", "..\4.CW_04.10.2020\4.CW_04.10.2020.csproj", "{0E475144-B9D6-496D-88DC-10D611BC5A9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4.CW_04.10.2020", "..\4.CW_04.10.2020\4.CW_04.10.2020.csproj", "{0E475144-B9D6-496D-88DC-10D611BC5A9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.HW_13.09.2020", "..\1.HW_13.09.2020\1.HW_13.09.2020.csproj", "{4C219625-754A-45D3-96C7-4F9D438C0997}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{0E475144-B9D6-496D-88DC-10D611BC5A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E475144-B9D6-496D-88DC-10D611BC5A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E475144-B9D6-496D-88DC-10D611BC5A9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C219625-754A-45D3-96C7-4F9D438C0997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C219625-754A-45D3-96C7-4F9D438C0997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C219625-754A-45D3-96C7-4F9D438C0997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C219625-754A-45D3-96C7-4F9D438C0997}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
