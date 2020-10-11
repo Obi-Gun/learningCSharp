@@ -17,7 +17,7 @@ namespace _5.CW_11._10._2020
             {
                 if (index < _leftBorder || index > _rightBorder)
                     throw new ArgumentOutOfRangeException();
-                return _array[index + _leftBorder]; 
+                return _array[index - _leftBorder]; 
             }
             set
             {

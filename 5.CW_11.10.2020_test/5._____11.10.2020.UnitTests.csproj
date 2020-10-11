@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\5.CW_11.10.2020\5.CW_11.10.2020.csproj" />
+    <ProjectReference Include="..\5.CW_11.10.2020\5.CH_11.10.2020.csproj" />
   </ItemGroup>
 
 </Project>
