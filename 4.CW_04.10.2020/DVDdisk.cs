@@ -9,30 +9,37 @@ namespace _4.CW_04._10._2020
         private int _writeSpeed { get; set; }
         private int _readSpeed { get; set; }
 
-        internal DVDdisk(int writeSpeed, int readSpeed, DiskType diskType) : base("DVDdisk", "34rrr34")
+        internal DVDdisk(int writeMBperSec, int readMBperSec, DiskType diskType, string model = "Sony CD") : base("DVDdisk", model, (int)diskType)
         {
-            _writeSpeed = writeSpeed;
-            _readSpeed = readSpeed;
-            FullSpace = diskType == DiskType.OneSideDisk ? 4.7 : 9.0;
+            _writeSpeed = writeMBperSec;
+            _readSpeed = readMBperSec;
         }
 
-        public override bool Copy(int size)
+        public override bool Copy(int sizeMB)
         {
-            if (size > FreeSpace)
+            if (!IsEnoughSpace(sizeMB))
                 return false;
-            FreeSpace -= size;
-            _usedSpace += size;
+
+            FreeSpaceMB -= sizeMB;
+            UsedSpaceMB += sizeMB;
             return true;
         }
 
         public override string ToString()
         {
-            return $"Name: {_name}\nModel: {_model}\nFullSpace: {FullSpace}\nFreeSpace: {FreeSpace}\nWriteSpeed: {_writeSpeed}\nReadSpeed: {_readSpeed}";
+            return $"Name: {_name}\nModel: {_model}\nFullSpace: {FullSpaceMB}\nFreeSpace: {FreeSpaceMB}\nWriteSpeed: {_writeSpeed}\nReadSpeed: {_readSpeed}";
         }
 
-        public override int CalcCopyTimeSec(int sizeMB)
+        public override int CalcTime(int sizeMB)
         {
-            return sizeMB / _writeSpeed;
+            return (int)Math.Round((double)sizeMB / _writeSpeed, MidpointRounding.ToPositiveInfinity);
+        }
+
+        internal override bool IsEnoughSpace(int sizeMB)
+        {
+            if (sizeMB <= FreeSpaceMB)
+                return true;
+            return false;
         }
     }
 }

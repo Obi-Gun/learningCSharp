@@ -6,26 +6,40 @@ namespace _4.CW_04._10._2020
 {
     internal class ExternalHDD : Storage
     {
+        /// <summary>
+        /// MB per second.
+        /// </summary>
         private int _speed { get; set; }
 
-        internal ExternalHDD(double size, USBType uSBType) : base("ExternalHDD", "gggggExternalHDD")
+        internal ExternalHDD(int sizeMB, USBTypeSpeed uSBType, string model = "WD Green") : base("ExternalHDD", model, sizeMB)
         {
-            FullSpace = size;
-            _speed = uSBType == USBType.USB2_0 ? USB._USB2_0Speed : USB._USB3_0Speed;
+            _speed = (int)uSBType;
         }
 
-        public override bool Copy(int size)
+        public override bool Copy(int sizeMB)
         {
-            if (size > FreeSpace)
+            if (!IsEnoughSpace(sizeMB))
                 return false;
-            FreeSpace -= size;
-            _usedSpace += size;
+            FreeSpaceMB -= sizeMB;
+            UsedSpaceMB += sizeMB;
             return true;
         }
 
         public override string ToString()
         {
-            return $"Name: {_name}\nModel: {_model}\nFullSpace: {FullSpace}\nFreeSpace: {FreeSpace}\nSpeed: {_speed}";
+            return $"Name: {_name}\nModel: {_model}\nFullSpace: {FullSpaceMB}\nFreeSpace: {FreeSpaceMB}\nSpeed: {_speed}";
+        }
+
+        public override int CalcTime(int sizeMB)
+        {
+            return (int)Math.Round((double)sizeMB / _speed, MidpointRounding.ToPositiveInfinity);
+        }
+
+        internal override bool IsEnoughSpace(int sizeMB)
+        {
+            if (sizeMB <= FreeSpaceMB)
+                return true;
+            return false;
         }
     }
 }
