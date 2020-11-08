@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "8.CW_1.11.2020_Collections"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9.CW_8.11.2020_Delegates", "..\9.CW_8.11.2020_Delegates\9.CW_8.11.2020_Delegates.csproj", "{D9713D9F-3052-4A18-8023-1D69D1F260FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.HW_8.11.2020_override_operators", "..\7.HW_8.11.2020_override_operators\7.HW_8.11.2020_override_operators.csproj", "{9E069C50-6776-4D2C-9566-2580A011738E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{D9713D9F-3052-4A18-8023-1D69D1F260FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9713D9F-3052-4A18-8023-1D69D1F260FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9713D9F-3052-4A18-8023-1D69D1F260FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E069C50-6776-4D2C-9566-2580A011738E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E069C50-6776-4D2C-9566-2580A011738E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E069C50-6776-4D2C-9566-2580A011738E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E069C50-6776-4D2C-9566-2580A011738E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
