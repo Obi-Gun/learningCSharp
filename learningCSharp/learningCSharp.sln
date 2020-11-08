@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.HW", "..\2.HW\2.HW.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.HW", "..\3.HW\3.HW.csproj", "{BAE6A3C8-A65A-4A10-987B-DFC41EF99952}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8.CW_1.11.2020_Collections", "..\8.CW_1.11.2020_Collections\8.CW_1.11.2020_Collections.csproj", "{227F5373-D150-47EB-8B41-F9E1E23914FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "8.CW_1.11.2020_Collections", "..\8.CW_1.11.2020_Collections\8.CW_1.11.2020_Collections.csproj", "{227F5373-D150-47EB-8B41-F9E1E23914FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9.CW_8.11.2020_Delegates", "..\9.CW_8.11.2020_Delegates\9.CW_8.11.2020_Delegates.csproj", "{D9713D9F-3052-4A18-8023-1D69D1F260FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{227F5373-D150-47EB-8B41-F9E1E23914FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{227F5373-D150-47EB-8B41-F9E1E23914FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{227F5373-D150-47EB-8B41-F9E1E23914FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9713D9F-3052-4A18-8023-1D69D1F260FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9713D9F-3052-4A18-8023-1D69D1F260FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9713D9F-3052-4A18-8023-1D69D1F260FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9713D9F-3052-4A18-8023-1D69D1F260FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
