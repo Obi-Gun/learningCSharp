@@ -27,9 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.HW", "..\3.HW\3.HW.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "8.CW_1.11.2020_Collections", "..\8.CW_1.11.2020_Collections\8.CW_1.11.2020_Collections.csproj", "{227F5373-D150-47EB-8B41-F9E1E23914FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9.CW_8.11.2020_Delegates", "..\9.CW_8.11.2020_Delegates\9.CW_8.11.2020_Delegates.csproj", "{D9713D9F-3052-4A18-8023-1D69D1F260FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "9.CW_8.11.2020_Delegates", "..\9.CW_8.11.2020_Delegates\9.CW_8.11.2020_Delegates.csproj", "{D9713D9F-3052-4A18-8023-1D69D1F260FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.HW_8.11.2020_override_operators", "..\7.HW_8.11.2020_override_operators\7.HW_8.11.2020_override_operators.csproj", "{9E069C50-6776-4D2C-9566-2580A011738E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7.HW_8.11.2020_override_operators", "..\7.HW_8.11.2020_override_operators\7.HW_8.11.2020_override_operators.csproj", "{9E069C50-6776-4D2C-9566-2580A011738E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.CW_15.11.2020_Streams", "..\10.CW_15.11.2020_Streams\10.CW_15.11.2020_Streams.csproj", "{A143E700-DDF6-4AC9-A735-8692E5DE586D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{9E069C50-6776-4D2C-9566-2580A011738E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E069C50-6776-4D2C-9566-2580A011738E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E069C50-6776-4D2C-9566-2580A011738E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A143E700-DDF6-4AC9-A735-8692E5DE586D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A143E700-DDF6-4AC9-A735-8692E5DE586D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A143E700-DDF6-4AC9-A735-8692E5DE586D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A143E700-DDF6-4AC9-A735-8692E5DE586D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
