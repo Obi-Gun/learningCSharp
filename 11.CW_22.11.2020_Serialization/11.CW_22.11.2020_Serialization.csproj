@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>_11.CW_22._11._2020_Serialization</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="protobuf-net" Version="3.0.62" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\10.CW_15.11.2020_Streams\10.CW_15.11.2020_Streams.csproj" />
+    <ProjectReference Include="..\11.CW_22.11.2020_ClassLib\11.CW_22.11.2020_ClassLib.csproj" />
+  </ItemGroup>
+
+</Project>
