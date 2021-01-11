@@ -4,15 +4,22 @@ using System.Text;
 
 namespace Dictionary
 {
-    /*public enum Action
+    public enum ActionMenu1
     {
         createNewDict,
-        addNewWord
-    }*/
+        openDict
+    }
 
-    public enum DictionaryType
+    public enum ActionMenu2
     {
-        RussianToEnglish,
-        EnglishToRussian
+        addNewWord,
+        findWord,
+        removeWord
+    }
+
+    public enum ActionMenu3
+    {
+        addTranslate,
+        removeTranslate
     }
 }

@@ -51,7 +51,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14.CW Calculator_for_unitTe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14.CW_13.12.2020_UnitTests", "..\NUnitTestProject1\14.CW_13.12.2020_UnitTests.csproj", "{3D912EB2-9122-4B69-9782-A136A93B9C3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictionary", "..\Dictionary\Dictionary.csproj", "{FF1F8CE4-9F24-4778-BD4E-CB4C4770E743}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TranslateDictionary", "..\Dictionary\TranslateDictionary.csproj", "{FF1F8CE4-9F24-4778-BD4E-CB4C4770E743}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

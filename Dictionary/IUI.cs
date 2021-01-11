@@ -4,6 +4,9 @@ namespace Dictionary
 {
     public interface IUI
     {
-        adfgsdfg
+        public void ShowUser(string message)
+        {
+            gg throw new NotImplementedException();
+        }
     }
 }

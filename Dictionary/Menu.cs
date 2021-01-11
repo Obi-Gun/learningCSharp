@@ -14,7 +14,7 @@ namespace Dictionary
             _currentIUI = uI ?? throw new ArgumentNullException(nameof(uI));
         }
 
-        public void CreateNewDict(DictionaryType dictionaryType)
+        public void CreateNewDict()
         {
             gg throw new NotImplementedException();
         }
