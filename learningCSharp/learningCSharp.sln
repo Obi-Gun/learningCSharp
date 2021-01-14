@@ -47,9 +47,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleCalc", "..\SimpleCalc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleProject", "..\SimpleProject\SimpleProject.csproj", "{E5DB3ED5-8939-4E96-AF62-159DCECC2577}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14.CW Calculator_for_unitTests", "..\14.CW Calculator\14.CW Calculator_for_unitTests.csproj", "{8D0F2021-BB97-4703-84F7-F1CF546C9DBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14.CW Calculator_for_unitTests", "..\14.CW Calculator\14.CW Calculator_for_unitTests.csproj", "{8D0F2021-BB97-4703-84F7-F1CF546C9DBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14.CW_13.12.2020_UnitTests", "..\NUnitTestProject1\14.CW_13.12.2020_UnitTests.csproj", "{3D912EB2-9122-4B69-9782-A136A93B9C3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14.CW_13.12.2020_UnitTests", "..\NUnitTestProject1\14.CW_13.12.2020_UnitTests.csproj", "{3D912EB2-9122-4B69-9782-A136A93B9C3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelExample", "..\ExcelExample\ExcelExample.csproj", "{ABCDE934-430B-4B7E-A1EF-DD47B85FAC4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -347,6 +349,18 @@ Global
 		{3D912EB2-9122-4B69-9782-A136A93B9C3D}.Release|x64.Build.0 = Release|Any CPU
 		{3D912EB2-9122-4B69-9782-A136A93B9C3D}.Release|x86.ActiveCfg = Release|Any CPU
 		{3D912EB2-9122-4B69-9782-A136A93B9C3D}.Release|x86.Build.0 = Release|Any CPU
+		{ABCDE934-430B-4B7E-A1EF-DD47B85FAC4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABCDE934-430B-4B7E-A1EF-DD47B85FAC4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABCDE934-430B-4B7E-A1EF-DD47B85FAC4A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{ABCDE934-430B-4B7E-A1EF-DD47B85FAC4A}.Debug|x64.Build.0 = Debug|Any CPU
+		{ABCDE934-430B-4B7E-A1EF-DD47B85FAC4A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ABCDE934-430B-4B7E-A1EF-DD47B85FAC4A}.Debug|x86.Build.0 = Debug|Any CPU
+		{ABCDE934-430B-4B7E-A1EF-DD47B85FAC4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABCDE934-430B-4B7E-A1EF-DD47B85FAC4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABCDE934-430B-4B7E-A1EF-DD47B85FAC4A}.Release|x64.ActiveCfg = Release|Any CPU
+		{ABCDE934-430B-4B7E-A1EF-DD47B85FAC4A}.Release|x64.Build.0 = Release|Any CPU
+		{ABCDE934-430B-4B7E-A1EF-DD47B85FAC4A}.Release|x86.ActiveCfg = Release|Any CPU
+		{ABCDE934-430B-4B7E-A1EF-DD47B85FAC4A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
