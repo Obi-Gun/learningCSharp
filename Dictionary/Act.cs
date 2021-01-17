@@ -6,24 +6,44 @@ namespace Dictionary
 {
     public enum Act
     {
+        ExceptionAction,
+
         WordWasAdded,
-        WordWasFounded,
+        WordWasFound,
         WordWasRemoved,
         WordWasNotAdded,
         WordWasNotFounded,
-        WordWasNotRemoved,
+        WordWasNotFound,
+        WordWasChanged,
+        WordWasNotChanged,
+
         TranslateWasAdded,
-        TranslateWasFounded,
+        TranslateWasFound,
         TranslateWasRemoved,
         TranslateWasNotAdded,
-        TranslateWasNotFounded,
+        TranslateWasNotFound,
         TranslateWasNotRemoved,
-        DictionaryWasAdded,
+        TranslationsWereFound,
+        TranslationsWereNotFound,
+        TranslationWasChanged,
+        TranslationWasNotChanged,
+
+        DictionaryWasCreated,
         DictionaryWasFounded,
         DictionaryWasRemoved,
-        DictionaryWasNotAdded,
+        DictionaryWasNotCreated,
         DictionaryWasNotFounded,
         DictionaryWasNotRemoved,
+        DictionatyWasSetByCurrentDict,
+        DictionatyWasNotBeSettedByCurrentDict,
+
+        CreateDictionary,
+        AddNewWord,
+        AddNewTranslation,
+        ChangeWord,
+        ChangeTranslate,
+
+        ShowMenu,
     }
 
 

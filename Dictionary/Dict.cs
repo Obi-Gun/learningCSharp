@@ -9,119 +9,160 @@ namespace TranslateDictionary
     {
         private readonly Dictionary<string, List<string>> _words = new Dictionary<string, List<string>>();
 
-        public string Name { get; set; } = "";
+        public string Name { get; }
 
-        public Dict()
+        public Dict(string dictName)
         {
-
+            Name = dictName ?? throw new ArgumentNullException(nameof(dictName));
         }
 
-        public bool TryAddNewWord(string word, string translate)
+        public bool TryFindWord(string word, out List<string> translations)
         {
+            translations = new List<string>();
             try
             {
-
+                if (_words.ContainsKey(word))
+                {
+                    translations = _words[word];
+                    return true;
+                }
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "");
+                Log.Error(ex, "Can't ");
             }
+            return false;
         }
 
-        public bool TryFindWord(string word)
+        public bool TryFindTranslateInConcreteWord(string word, string translation)
         {
             try
             {
-
+                if (!_words.ContainsKey(word)
+                    && !_words[word].Contains(translation))
+                {
+                    return false;
+                }
+                return true;
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "");
+                Log.Error(ex, "Can't ");
             }
+            return false;
+        }
+
+        public bool TryFindTranslationInAllWords(string translation, out List<string> words)
+        {
+            words = new List<string>();
+            try
+            {
+                foreach (var word in _words)
+                {
+                    foreach (var translate in word.Value)
+                    {
+                        if (translate == translation)
+                        {
+                            words.Add(word.Key);
+                            break;
+                        }
+                    }
+                }
+                if (words.Count > 0)
+                {
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Can't ");
+            }
+            return false;
         }
 
         public bool TryRemoveWord(string word)
         {
             try
             {
-
+                if (_words.ContainsKey(word))
+                {
+                    _words[word].Remove(word);
+                }
+                return true;
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "");
+                Log.Error(ex, "Can't ");
             }
+            return false;
         }
 
         public bool TryAddNewTranslate(string word, string translate)
         {
             try
             {
-
+                if (!_words.ContainsKey(word))
+                {
+                    _words.Add(word, new List<string> { translate });
+                    return true;
+                }
+                if (!_words[word].Contains(translate))
+                {
+                    _words[word].Add(translate);
+                }
+                return true;
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "");
+                Log.Error(ex, "Can't ");
             }
-        }
-
-        public bool TryFindTranslate(string word, string translate)
-        {
-            try
-            {
-
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex, "");
-            }
-        }
-
-        public bool TryFindTranslateInAllWords(string translate, out List<KeyValuePair<string, List<string>>> words)
-        {
-            try
-            {
-
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex, "");
-            }
+            return false;
         }
 
         public bool TryRemoveTranslate(string word, string translate)
         {
             try
             {
-
+                if (!_words.ContainsKey(word))
+                {
+                    return true;
+                }
+                if (_words[word].Contains(translate))
+                {
+                    _words[word].Remove(translate);
+                }
+                return true;
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "");
+                Log.Error(ex, "Can't ");
             }
+            return false;
         }
 
-        /*public bool TryAdd(string )
+        public bool TryChangeWord(string oldWord, string newWord)
         {
-
-        }
-
-        public bool TryFind(string )
-        {
-
-        }
-
-        public bool TryRemove(string )
-        {
-
-        }*/
-
-        /*try
+            try
             {
-
+                if (!_words.ContainsKey(oldWord))
+                {
+                    return false;
+                }
+                var translations = _words[oldWord];
+                _words.Remove(oldWord);
+                if (!_words.ContainsKey(newWord))
+                {
+                    _words.Add(newWord, translations);
+                    return true;
+                }
+                _words[newWord].AddRange(translations);
+                return true;
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "");
-            }*/
-}
+                Log.Error(ex, "Can't ");
+            }
+            return false;
+        }
+    }
 }

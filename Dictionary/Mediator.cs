@@ -27,23 +27,77 @@ namespace TranslateDictionary
             {
                 switch (action)
                 {
-                    case ggg:
-                        _saver.DoC();
+                    case Act.CreateDictionary:
+                        var dictName = _facade.UIConsole.AskUserForInputString("Введите название словаря: ");
+                        _dictonaries.CreateNewDictionary(dictName);
                         break;
-                    case ggg:
-                        _dictonaries.DoB();
-                        _saver.DoC();
-                        break;
-                    case ggg:
+                    case Act.DictionaryWasNotCreated:
 
                         break;
-                    case ggg:
+                    case Act.DictionaryWasCreated:
 
                         break;
-                    case ggg:
+                    case Act.ExceptionAction:
+                        
+                        break;
+                    case Act.AddNewWord:
+                        var word = _facade.UIConsole.AskUserForInputString("Введите новое слово: ");
+                        var translate = _facade.UIConsole.AskUserForInputString("Введите его веревод: ");
+                        _dictonaries.AddNewWord(word, translate);
+                        break;
+                    case Act.WordWasAdded:
 
                         break;
-                    case ggg:
+                    case Act.WordWasNotAdded:
+
+                        break;
+                    case Act.AddNewTranslation:
+                        word = _facade.UIConsole.AskUserForInputString("Введите слово: ");
+                        translate = _facade.UIConsole.AskUserForInputString("Введите его веревод: ");
+                        _dictonaries.AddNewTranslation(word, translate);
+                        break;
+                    case Act.TranslateWasAdded:
+
+                        break;
+                    case Act.TranslateWasNotAdded:
+
+                        break;
+                    case Act.ChangeWord:
+                        var oldWord = _facade.UIConsole.AskUserForInputString("Введите старое слово: ");
+                        var newWord = _facade.UIConsole.AskUserForInputString("Введите новое слово: ");
+                        _dictonaries.ChangeWord(oldWord, newWord);
+                        break;
+                    case Act.WordWasChanged:
+
+                        break;
+                    case Act.WordWasNotChanged:
+
+                        break;
+                    case Act.ChangeTranslate:
+
+                        break;
+                    case Act.:
+
+                        break;
+                    case Act.:
+
+                        break;
+                    case Act.:
+
+                        break;
+                    case Act.:
+
+                        break;
+                    case Act.:
+
+                        break;
+                    case Act.:
+
+                        break;
+                    case Act.:
+
+                        break;
+                    default:
 
                         break;
                 }

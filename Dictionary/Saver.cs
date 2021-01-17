@@ -6,22 +6,32 @@ namespace TranslateDictionary
 {
     public class Saver : BaseComponent
     {
-
-
-
-
-        public void DoC()
+        public void SaveCurrentDictToTxt()
         {
-            Console.WriteLine("Component 2 does C.");
+            try
+            {
 
-            this._mediator.Notify(this, "C");
+                _mediator.Notify(this, Act.);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "");
+            }
+            _mediator.Notify(this, Act.);
         }
 
-        public void DoD()
+        public void SaveCurrentDictToJson()
         {
-            Console.WriteLine("Component 2 does D.");
+            try
+            {
 
-            this._mediator.Notify(this, "D");
+                _mediator.Notify(this, Act.);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "");
+            }
+            _mediator.Notify(this, Act.);
         }
     }
 }
