@@ -4,8 +4,7 @@ using System.Text;
 
 namespace TranslateDictionary
 {
-    public class Core
+    public class UIConsole
     {
-
     }
 }
