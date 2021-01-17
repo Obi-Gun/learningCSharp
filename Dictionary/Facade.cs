@@ -5,7 +5,7 @@ namespace Dictionary
 {
     public class Facade
     {
-        private readonly Mediator _mediator;
+        private readonly IMediator _mediator;
 
         public IUI UI { get; }
 
