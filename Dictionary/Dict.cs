@@ -1,14 +1,18 @@
-﻿using Serilog;
+﻿using Newtonsoft.Json;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace TranslateDictionary
 {
+    [Serializable]
     public class Dict
     {
+        [JsonProperty("Words")]
         private readonly Dictionary<string, List<string>> _words = new Dictionary<string, List<string>>();
 
+        [JsonProperty("DictionaryName")]
         public string Name { get; }
 
         public Dict(string dictName)

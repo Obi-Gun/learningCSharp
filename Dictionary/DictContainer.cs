@@ -1,4 +1,5 @@
 ﻿using Dictionary;
+using Newtonsoft.Json;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -6,8 +7,10 @@ using System.Text;
 
 namespace TranslateDictionary
 {
+    [Serializable]
     public class DictContainer : BaseComponent
     {
+        [JsonProperty("Разные словари")]
         private Dictionary<string, Dict> _dictionaries = new Dictionary<string, Dict>();
         private Dict _currentDict = null;
 
@@ -133,13 +136,10 @@ namespace TranslateDictionary
             _mediator.Notify(this, $"Word {oldWord} was not changed. ", Act.WordWasNotChanged);
         }
 
-        public void ChangeTranslate(string word, string oldTranslation, string newTranslation)
+        public void ChangeTranslation(string word, string oldTranslation, string newTranslation)
         {
-            if (_currentDict.TryRemoveTranslate(word, newWord))
-            {
-                _mediator.Notify(this, $"Word {oldWord} was changed. ", Act.WordWasChanged);
-            }
-            _mediator.Notify(this, $"Word {oldWord} was not changed. ", Act.WordWasNotChanged);
+            _currentDict.TryRemoveTranslate(word, oldTranslation);
+            AddNewTranslation(word, newTranslation);
         }
     }
 }

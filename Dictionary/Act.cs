@@ -25,8 +25,8 @@ namespace Dictionary
         TranslateWasNotRemoved,
         TranslationsWereFound,
         TranslationsWereNotFound,
-        TranslationWasChanged,
-        TranslationWasNotChanged,
+        //TranslationWasChanged,
+        //TranslationWasNotChanged,
 
         DictionaryWasCreated,
         DictionaryWasFounded,
@@ -41,36 +41,12 @@ namespace Dictionary
         AddNewWord,
         AddNewTranslation,
         ChangeWord,
-        ChangeTranslate,
+        ChangeTranslation,
+        RemoveWord,
+        RemoveTranslation,
+        SearchTranslations,
 
-        ShowMenu,
+        SmthWentWrong,
+        Done,
     }
-
-
-        /*WasAdded,
-        WasFounded,
-        WasRemoved,
-        WasNotAdded,
-        WasNotFounded,
-        WasNotRemoved,*/
-
-    /*
-     public enum ActionMenu1
-    {
-        createNewDict,
-        openDict
-    }
-
-    public enum ActionMenu2
-    {
-        addNewWord,
-        findWord,
-        removeWord
-    }
-
-    public enum ActionMenu3
-    {
-        addTranslate,
-        removeTranslate
-    }*/
 }

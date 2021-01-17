@@ -5,13 +5,13 @@ using System.Text;
 
 namespace TranslateDictionary
 {
-    public class UIConsole
+    public class UIConsole : IUI
     {
         private const string Separator = "\n\n__________________________________________________________________________";
 
         static void Main(string[] args)
         {
-            var facade = new Facade();
+            var facade = new Facade(new UIConsole());
             facade.StartProgram();
         }
 
@@ -37,7 +37,7 @@ namespace TranslateDictionary
             return Console.ReadLine();
         }
 
-        public void ShowUserMessage(string message)
+        public void ShowMessageToUser(string message)
         {
             Console.WriteLine(Separator);
             Console.WriteLine(message);

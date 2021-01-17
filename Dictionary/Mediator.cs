@@ -28,78 +28,77 @@ namespace TranslateDictionary
                 switch (action)
                 {
                     case Act.CreateDictionary:
-                        var dictName = _facade.UIConsole.AskUserForInputString("Введите название словаря: ");
+                        var dictName = _facade.UI.AskUserForInputString("Введите название словаря: ");
                         _dictonaries.CreateNewDictionary(dictName);
                         break;
-                    case Act.DictionaryWasNotCreated:
 
-                        break;
-                    case Act.DictionaryWasCreated:
-
-                        break;
-                    case Act.ExceptionAction:
-                        
-                        break;
                     case Act.AddNewWord:
-                        var word = _facade.UIConsole.AskUserForInputString("Введите новое слово: ");
-                        var translate = _facade.UIConsole.AskUserForInputString("Введите его веревод: ");
+                        var word = _facade.UI.AskUserForInputString("Введите новое слово: ");
+                        var translate = _facade.UI.AskUserForInputString("Введите его веревод: ");
                         _dictonaries.AddNewWord(word, translate);
                         break;
-                    case Act.WordWasAdded:
 
-                        break;
-                    case Act.WordWasNotAdded:
-
-                        break;
                     case Act.AddNewTranslation:
-                        word = _facade.UIConsole.AskUserForInputString("Введите слово: ");
-                        translate = _facade.UIConsole.AskUserForInputString("Введите его веревод: ");
+                        word = _facade.UI.AskUserForInputString("Введите слово: ");
+                        translate = _facade.UI.AskUserForInputString("Введите его веревод: ");
                         _dictonaries.AddNewTranslation(word, translate);
                         break;
-                    case Act.TranslateWasAdded:
 
-                        break;
-                    case Act.TranslateWasNotAdded:
-
-                        break;
                     case Act.ChangeWord:
-                        var oldWord = _facade.UIConsole.AskUserForInputString("Введите старое слово: ");
-                        var newWord = _facade.UIConsole.AskUserForInputString("Введите новое слово: ");
+                        var oldWord = _facade.UI.AskUserForInputString("Введите старое слово: ");
+                        var newWord = _facade.UI.AskUserForInputString("Введите новое слово: ");
                         _dictonaries.ChangeWord(oldWord, newWord);
                         break;
+
+                    case Act.ChangeTranslation:
+                        word = _facade.UI.AskUserForInputString("Введите слово: ");
+                        var oldTranslation = _facade.UI.AskUserForInputString("Введите перевод, который надо заменить: ");
+                        var newTranslation = _facade.UI.AskUserForInputString("Введите перевод на замену: ");
+                        _dictonaries.ChangeTranslation(word, oldTranslation, newTranslation);
+                        break;
+
+                    case Act.RemoveWord:
+
+                        break;
+
+                    case Act.RemoveTranslation:
+
+                        break;
+
+                    case Act.SearchTranslations:
+
+                        break;
+
+                    case Act.:
+
+                        break;
+
+                    case Act.:
+
+                        break;
+
                     case Act.WordWasChanged:
-
+                    case Act.TranslateWasAdded:
+                    case Act.WordWasAdded:
+                    case Act.DictionaryWasCreated:
+                    case Act.Done:
+                        _facade.UI.ShowMessageToUser("Готово. ");
+                        _facade.ShowMenu();
                         break;
+
+                    case Act.ExceptionAction:
+                    case Act.DictionaryWasNotCreated:
                     case Act.WordWasNotChanged:
-
+                    case Act.TranslateWasNotAdded:
+                    case Act.WordWasNotAdded:
+                    case Act.SmthWentWrong:
+                        _facade.UI.ShowMessageToUser("В прошлой операции что-то пошло не так. " + message);
+                        _facade.ShowMenu();
                         break;
-                    case Act.ChangeTranslate:
 
-                        break;
-                    case Act.:
-
-                        break;
-                    case Act.:
-
-                        break;
-                    case Act.:
-
-                        break;
-                    case Act.:
-
-                        break;
-                    case Act.:
-
-                        break;
-                    case Act.:
-
-                        break;
-                    case Act.:
-
-                        break;
                     default:
-
-                        break;
+                        message = "В программе непредусмотренный переход в меню. " + message;
+                        goto case Act.SmthWentWrong;
                 }
             }
             catch (Exception ex)

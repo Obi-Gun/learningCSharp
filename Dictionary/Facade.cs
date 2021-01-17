@@ -7,17 +7,23 @@ namespace Dictionary
     {
         private readonly Mediator _mediator;
 
-        public UIConsole UIConsole { get; }
+        public IUI UI { get; }
 
-        public Facade(UIConsole uIConsole)
+        public Facade(IUI uI)
         {
             _mediator = new Mediator(new Saver(), new DictContainer(), this);
-            UIConsole = uIConsole ?? throw new ArgumentNullException(nameof(uIConsole));
+            UI = uI ?? throw new ArgumentNullException(nameof(uI));
         }
 
         public void StartProgram()
         {
-            showMenu();
+            //showMenu();
+        }
+
+        public void ShowMenu()
+        {
+            asdf;
+            _mediator.Notify();
         }
     }
 }
