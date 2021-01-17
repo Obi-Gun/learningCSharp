@@ -6,5 +6,11 @@ namespace TranslateDictionary
 {
     public class Dict
     {
+        private Dictionary<string, List<string>> _words;
+
+        public Dict()
+        {
+
+        }
     }
 }
