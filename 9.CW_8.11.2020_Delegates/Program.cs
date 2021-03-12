@@ -27,7 +27,25 @@ namespace _9.CW_8._11._2020_Delegates
             //Task10Extentions2();
             //Task11Linq();
             //Task11Linq2();
-            Task11Linq4();
+            //Task11Linq4();
+            Task12TestLazyQuerry();
+        }
+
+        private static void Task12TestLazyQuerry()
+        {
+            var arr = new List<int> { 1, 4, 65, 3, 8, 43, 85 };
+            var res = arr.Select(x => x);
+            arr[0] = 6666;
+            foreach (var i in res)
+                Console.WriteLine(i);
+
+            arr[1] = 6666;
+            foreach (var i in res)
+                Console.WriteLine(i);
+
+            arr[2] = 6666;
+            foreach (var i in res)
+                Console.WriteLine(i);
         }
 
         private static void Task1()
