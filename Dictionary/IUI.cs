@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace Dictionary
+namespace TranslateDictionary
 {
     public interface IUI
     {
-        public void ShowUser(string message)
-        {
-            gg throw new NotImplementedException();
-        }
+        int AskUserForInputMenuPoint(string message);
+
+        string AskUserForInputString(string message);
+
+        void ShowMessageToUser(string message);
     }
 }
