@@ -28,7 +28,18 @@ namespace _9.CW_8._11._2020_Delegates
             //Task11Linq();
             //Task11Linq2();
             //Task11Linq4();
-            Task12TestLazyQuerry();
+            //Task12TestLazyQuerry();
+            Task13TestFirstOrDefault();
+        }
+
+        private static void Task13TestFirstOrDefault()
+        {
+            var people = new List<IHuman>()
+            {
+                new Teacher(), new Dispacher()
+            };
+            var student = people.FirstOrDefault(p => p is Teacher) as Teacher;
+            student.ToString();
         }
 
         private static void Task12TestLazyQuerry()

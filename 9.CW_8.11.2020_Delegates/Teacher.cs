@@ -4,7 +4,7 @@ using System.Text;
 
 namespace _9.CW_8._11._2020_Delegates
 {
-    public class Teacher
+    public class Teacher : IHuman
     {
         public event ExamDelegate ExamEvent;
 
